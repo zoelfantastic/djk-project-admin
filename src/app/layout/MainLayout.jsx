@@ -18,7 +18,7 @@ export class MainLayout extends PureComponent {
             <div>
                 <Header />
                 <Menu />
-                <Content children={children} />
+                <Content children={children} title={title} />
                 <Footer />
             </div>
         )

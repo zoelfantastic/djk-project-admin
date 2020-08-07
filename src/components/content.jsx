@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 export class Content extends PureComponent {
   static propTypes = {
@@ -7,7 +8,17 @@ export class Content extends PureComponent {
   }
 
   render() {
-    const { children} = this.props;
+    const { children, title} = this.props;
+    const { path } = children.props;
+    const pathSnippets = path.split('/').filter(i => i);
+    const extraBreadcrumbItems = pathSnippets.map((_, index) => {
+      return  `/${pathSnippets.slice(0, index + 1).join('/')}`;
+      // return (
+      //   <Breadcrumb.Item key={url}>
+      //     <Link to={url}>{title}</Link>
+      //   </Breadcrumb.Item>
+      // );
+    });
     return (
       <div className="content-wrapper">
       {/* Content Header (Page header) */}
@@ -15,15 +26,14 @@ export class Content extends PureComponent {
         <div className="container-fluid">
           <div className="row mb-2">
             <div className="col-sm-6">
-              <h1 className="m-0 text-dark">Dashboard v3</h1>
+              <h1 className="m-0 text-dark">{title}</h1>
             </div>
             {/* /.col */}
             <div className="col-sm-6">
               <ol className="breadcrumb float-sm-right">
-                <li className="breadcrumb-item">
-                  <a href="">Home</a>
-                </li>
-                <li className="breadcrumb-item active">Dashboard v3</li>
+                <Link className="breadcrumb-item" to="/">Home</Link>
+                <Link className="breadcrumb-item active" to={extraBreadcrumbItems}>{title}</Link>
+                {/* <li className="breadcrumb-item active">Dashboard v3</li> */}
               </ol>
             </div>
             {/* /.col */}

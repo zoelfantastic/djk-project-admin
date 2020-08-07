@@ -18,8 +18,8 @@ export default class Table extends React.Component {
     }
 
     getKeys = function(){
-    //   return Object.keys(this.props.data[0]);
-        return this.props.header;
+     return Object.keys(this.props.data[0]);
+      //  return this.props.header;
     }
     
     getHeader = function(){
@@ -33,19 +33,27 @@ export default class Table extends React.Component {
       var items = this.props.data;
       var keys = this.getKeys();
       return items.map((row, index)=>{
-        return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
+      return <tr key={index}>{this.renderRow({index, row, keys})  }</tr>
+        // return <tr key={index}><RenderRow key={index} data={row} keys={keys}/></tr>
+      })
+    }
+
+    renderRow = (props) => {
+      return props.keys.map((key, index)=>{
+        return <td key={props.row[key]}>{props.row[key]}</td>
       })
     }
     
     render() {
+        let a = this.getRowsData();
         return (
           <div>
-            <table id="example1" class="table table-bordered table-striped">
+            <table id="example1" className="table table-bordered table-striped">
             <thead>
               <tr>{this.getHeader()}</tr>
             </thead>
             <tbody>
-              {this.getRowsData()}
+              {a}
             </tbody>
             </table>
           </div>
