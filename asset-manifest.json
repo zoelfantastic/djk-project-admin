@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/djk-project-admin/static/css/main.69eda509.chunk.css",
+    "main.js": "/djk-project-admin/static/js/main.0a793c66.chunk.js",
+    "main.js.map": "/djk-project-admin/static/js/main.0a793c66.chunk.js.map",
+    "runtime-main.js": "/djk-project-admin/static/js/runtime-main.919fa392.js",
+    "runtime-main.js.map": "/djk-project-admin/static/js/runtime-main.919fa392.js.map",
+    "static/js/2.d2b245dc.chunk.js": "/djk-project-admin/static/js/2.d2b245dc.chunk.js",
+    "static/js/2.d2b245dc.chunk.js.map": "/djk-project-admin/static/js/2.d2b245dc.chunk.js.map",
+    "index.html": "/djk-project-admin/index.html",
+    "precache-manifest.7dcf0c0208a6233a01b7ab91ed0115c3.js": "/djk-project-admin/precache-manifest.7dcf0c0208a6233a01b7ab91ed0115c3.js",
+    "service-worker.js": "/djk-project-admin/service-worker.js",
+    "static/css/main.69eda509.chunk.css.map": "/djk-project-admin/static/css/main.69eda509.chunk.css.map",
+    "static/js/2.d2b245dc.chunk.js.LICENSE.txt": "/djk-project-admin/static/js/2.d2b245dc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.919fa392.js",
+    "static/js/2.d2b245dc.chunk.js",
+    "static/css/main.69eda509.chunk.css",
+    "static/js/main.0a793c66.chunk.js"
+  ]
+}
