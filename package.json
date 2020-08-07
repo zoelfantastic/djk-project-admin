@@ -41,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "."
+  "homepage": "http://zoelfantastic.github.io/djk-project-admin",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }
